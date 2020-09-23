@@ -44,7 +44,6 @@ COPY /confs/slaves /opt/spark/conf/
 COPY /script_files/bootstrap.sh /
 COPY /confs/spark-defaults.conf ${SPARK_HOME}/conf
 
-#RUN jupyter toree install --spark_home=${SPARK_HOME}
 RUN echo "export JAVA_HOME=${JAVA_HOME}" >> /etc/environment
 
 EXPOSE 9000
