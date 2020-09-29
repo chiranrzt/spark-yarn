@@ -40,7 +40,9 @@ RUN chmod 600 /root/.ssh/config
 
 COPY /confs/*.xml /opt/hadoop/etc/hadoop/
 COPY /confs/slaves /opt/hadoop/etc/hadoop/
+COPY /confs/workers /opt/hadoop/etc/hadoop/
 COPY /confs/slaves /opt/spark/conf/
+COPY /confs/workers /opt/spark/conf/
 COPY /script_files/bootstrap.sh /
 COPY /confs/spark-defaults.conf ${SPARK_HOME}/conf
 
